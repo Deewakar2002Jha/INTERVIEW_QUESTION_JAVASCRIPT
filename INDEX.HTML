@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERVIEW QUOESTION</title>
+</head>
+<body>
+    <H2>Q):- write a program to check if the number is palindrome ?</H2>
+    <H2>Q):- write a program to check the min and max from an array ?
+        <h4>Ex [7,6,77,54,333,66,-3,930,981]</h4>
+    </H2>
+    <H2>Q):- write a program to check how many time is number is repeated in the array ?
+        <h4>Ex [1,2,3,4,5,5,64,3,3,6,5,3,3,3,2,1,0]</h4>
+    </H2>
+    <script>
+        //blank object
+        var obj = {};//js object
+        //To addd new property just use object.newproperty
+        /*
+        obj.name = 'deewakar';
+        //obj["newproperty"]
+        obj["surname"] = 'jha';
+        console.log(obj);
+        */
+
+        var arr = [1,2,3,4,5,5,64,3,3,6,5,3,3,3,2,1,0];
+        //typeof function is use to check the type of the array
+        console.log(typeof arr);
+        //Fat arrow function Notation ES6
+        /*
+        arr.forEach(element => {
+            console.log(element);   
+        }); 
+        */
+        //using fatarrow funtion
+        /*
+        arr.forEach((element) => {
+            console.log(element);
+        });
+        */
+        // classic way
+        arr.forEach(function(currentValue,index,arr){//formal Argument
+            //console.log(currentValue);
+            if(Object.keys(obj).length === 0){
+                //console.log('Not Empty');
+                /*
+                    {
+                        1:1
+                    }
+                 */
+                obj[currentValue] = 1;
+            }else{
+                //console.log('Empty');
+                for (var key in obj) {
+                    //console.log('key' ,key);
+                    key = parseInt(key);
+                    //console.log('key',typeof key);
+                    //console.log('currentValue',typeof currentValue);
+                    if(key == currentValue){
+                        //console.log("ok");
+                        obj[key] = obj[key] +1;
+                    }
+                    if(!obj.hasOwnProperty(currentValue)){
+                        obj[currentValue] = 1;
+                    }
+                    // else{
+                    //     //console.log("not ok");
+                    // }
+            }
+            }
+            //1.Let check if the currrntvalue is present in the object property
+            
+        });
+        console.log(obj);
+    </script>
+</body>
+</html>

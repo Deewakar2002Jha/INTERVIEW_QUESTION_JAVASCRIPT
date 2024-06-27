@@ -1,0 +1,9 @@
+[1,2,3,4,5,5,64,3,3,6,5,3,3,3,2,1,0]
+for iterating over an array
+forEach is use
+
+for iterating over object
+forin
+{
+    p:v[property,value]
+}
